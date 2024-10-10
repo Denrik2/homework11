@@ -1,5 +1,5 @@
 public class Main {
-    public static int calculatingYear(int year) {
+    public static int definitionOfYear(int year) {
         System.out.println("Задание №1");
         if (year > 1584) {
             if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
@@ -9,10 +9,8 @@ public class Main {
         return year;
     }
 
-    public static int definingVersion(int[] model) {
+    public static int definingVersion(int clientOS, int clientDeviceYear) {
         System.out.println("Задание №2");
-        int clientDeviceYear = model[1];
-        int clientOS = model[0];
         if (clientOS == 1 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else if (clientOS == 1 && clientDeviceYear < 2015) {
@@ -38,11 +36,13 @@ public class Main {
         }
         return distance;
     }
+
     public static void main(String[] args) {
         int year = 2000;
-        calculatingYear(year);
-        int[] model = new int[] {0, 2008};
-        definingVersion(model);
+        definitionOfYear(year);
+        int clientOS = 0;
+        int clientDeviceYear = 2008;
+        definingVersion(clientOS, clientDeviceYear);
         int distance = 95;
         calculationOfDeliveryDays(distance);
     }
