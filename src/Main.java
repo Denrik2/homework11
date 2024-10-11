@@ -11,15 +11,15 @@ public class Main {
 
     public static int definingVersion(int clientOS, int clientDeviceYear) {
         System.out.println("Задание №2");
-        if (clientOS == 1 && clientDeviceYear > 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOS == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } if (clientOS == 0 && clientDeviceYear > 2015) {
-            System.out.println("Установите версию приложения для IOS по ссылке");
-        } else if (clientOS == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-        }
+        if (clientOS == 1) {
+            if (clientDeviceYear > 2015) {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            } else { System.out.println("Установите облегченную версию приложения для Android по ссылке");}
+        } else {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите версию приложения для IOS по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для IOS по ссылке");}}
         return clientOS;
     }
 
